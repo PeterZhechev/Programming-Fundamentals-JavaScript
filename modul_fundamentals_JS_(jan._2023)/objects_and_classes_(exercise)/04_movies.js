@@ -1,4 +1,4 @@
-function movies(params) {
+function movies() {
     
 }
 
