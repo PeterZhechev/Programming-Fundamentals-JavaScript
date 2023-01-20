@@ -1,11 +1,19 @@
 function inventory(arr) {
-    
+
     let formattedArr = [];
     let sortedArr = [];
     let heroName = '';
     let heroLevel = 0;
     let items = '';
     let arrayLength = arr.length;
+
+    class Inventory {
+        constructor(hero, level, items) {
+            this.hero = hero;
+            this.level = level;
+            this.items = items;
+        }
+    }
 
     for (let i = 0; i < arrayLength; i++) {
         let currentLine = arr[i].split('/');
@@ -42,11 +50,21 @@ function inventory(arr) {
         smallest = Number.MAX_SAFE_INTEGER;
     }
 
+    for (let i = 0; i < sortedArr.length; i++) {
+        let currentLine = sortedArr[i];
+        let hero = currentLine[0];
+        let level = currentLine[1];
+        let items = currentLine[2];
+        let register = new Inventory(hero, level, items);
+        console.log(`Hero: ${register.hero}`);
+        console.log(`level => ${register.level}`);
+        console.log(`Items => ${items}`);
+    }
 }
 
 inventory([
     'Isacc / 25 / Apple, GravityGun',
     'Derek / 12 / BarrelVest, DestructionSword',
     'Hes / 1 / Desolator, Sentinel, Antara'
-    ]
-    );
+]
+);
