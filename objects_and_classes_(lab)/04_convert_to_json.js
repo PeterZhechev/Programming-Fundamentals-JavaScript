@@ -1,8 +1,8 @@
-function test(name, lastName, hairColor) {
+function convertToJson(name, lastName, hairColor) {
 
     let obj1 = {name, lastName, hairColor};
 
     console.log(JSON.stringify(obj1));
 }
 
-test('George', 'Jones', 'Brown');
+convertToJson('George', 'Jones', 'Brown');
