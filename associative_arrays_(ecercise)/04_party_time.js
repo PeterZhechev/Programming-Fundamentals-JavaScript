@@ -27,9 +27,6 @@ function partyTime(input) {
     }
 
     comingGuests.shift();
-
-    let listWithTheGuestsObj = {};
-    let comingGuestsObj = {};
     
     for (let i = 0; i < comingGuests.length; i++) {
         let currentCommingGuest = comingGuests[i];
