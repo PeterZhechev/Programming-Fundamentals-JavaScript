@@ -26,7 +26,6 @@ function browserHistory(obj, arr) {
                 obj['Recently Closed'] = [];
                 obj['Open Tabs'] = [];
                 break;
-
         }
     }
 
