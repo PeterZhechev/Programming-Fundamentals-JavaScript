@@ -1,23 +1,26 @@
 class Storage {
 
+    totalCost = 0;
     constructor(capacity) {
         this.capacity = capacity;
-    }
-    
-    addProduct (input) {
-        // this.product = input;
-        storage.pruduct = input;
-        let allProducts = storage.product;
-        console.log(storage.product);
+        this.storage = [];
     }
 
-    getProducts () { 
 
-        let toJson = JSON.stringify(storage.product)
-        return toJson;
+    addProduct(input) {
+        this.capacity -= input.quantity;
+        let currentPrice = (input.price * input.quantity);
+        this.storage.push(input);
+        this.totalCost += currentPrice;
     }
-    
-    // storage.totalCost = storage.price * storage.quantity;
+
+    getProducts() {
+        let toJsonArr = [];
+        for (let el of this.storage) {
+            toJsonArr.push(JSON.stringify(el));
+        }
+        return toJsonArr.join('\n');
+    }
 }
 
 // let productOne = { name: 'Tomato', price: 0.90, quantity: 19 };
