@@ -11,14 +11,11 @@ function makeADictionary(input) {
         }
     }
 
-    // sort object
     let objEntries = Object.entries(jsonToObj);
     objEntries.sort((kvpA, kvpB) => kvpA[0].localeCompare(kvpB[0]));
-    let sortedObj = Object.fromEntries(objEntries);
 
-    // print to the console sorted object
-    for (line in sortedObj) {
-        console.log(`Term: ${line} => Definition: ${sortedObj[line]}`);
+    for (line of objEntries) {
+        console.log(`Term: ${line[0]} => Definition: ${jsonToObj[line[0]]}`);
     }
 }
 
