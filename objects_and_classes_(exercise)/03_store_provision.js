@@ -29,7 +29,6 @@ function storeProvision(currentStock, ordered) {
         }
     }
 
-    let currentSum = 0;
     let totalList = currentStockList.slice(0);
     let alreadyIn = [];
 
