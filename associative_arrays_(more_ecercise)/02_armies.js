@@ -95,14 +95,14 @@ function armies(input) {
             let currentArmy = currentLeader[army];
             totalArmyCount += currentArmy;
         }
-        
+
         currentLeader.totalArmyCount = totalArmyCount;
         leadersArr[index].push(totalArmyCount);
         index++;
     }
 
     let sortedArmiesByTotalArmyCount = leadersArr.sort((a, b) => b[1] - a[1]);
-    
+
     for (let el of sortedArmiesByTotalArmyCount) {
         let currentLeader = el[0];
         let currentLeadersArmies = leaders[el[0]];
@@ -119,4 +119,4 @@ function armies(input) {
 
 armies(['Rick Burr arrives', 'Fergus: Wexamp, 30245', 'Rick Burr: Juard, 50000', 'Findlay arrives', 'Findlay: Britox, 34540', 'Wexamp + 6000', 'Juard + 1350', 'Britox + 4500', 'Porter arrives', 'Porter: Legion, 55000', 'Legion + 302', 'Rick Burr defeated', 'Porter: Retix, 3205']);
 
-// armies(['Rick Burr arrives', 'Findlay arrives', 'Rick Burr: Juard, 1500', 'Wexamp arrives', 'Findlay: Wexamp, 34540', 'Wexamp + 340', 'Wexamp: Britox, 1155', 'Wexamp: Juard, 43423'])
+// armies(['Rick Burr arrives', 'Findlay arrives', 'Rick Burr: Juard, 1500', 'Wexamp arrives', 'Findlay: Wexamp, 34540', 'Wexamp + 340', 'Wexamp: Britox, 1155', 'Wexamp: Juard, 43423']);
