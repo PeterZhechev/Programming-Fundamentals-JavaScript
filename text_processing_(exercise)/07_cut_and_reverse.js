@@ -4,10 +4,10 @@ function cutAndReverse(input) {
 
     let firstHalf = input
         .substring(0, textLength / 2)
-        .split('').
-        reverse().
-        join('');
-        
+        .split('')
+        .reverse()
+        .join('');
+
     let secondHalf = input
         .substring(textLength / 2, input.length)
         .split('')
