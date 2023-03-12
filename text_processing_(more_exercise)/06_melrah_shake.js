@@ -22,7 +22,7 @@ function melrahShake(arr) {
             splittedStr.splice(firstPart, pattern.length);
             splittedStr.splice(lastPart - pattern.length, pattern.length);
             console.log('Shaked it.');
-            let harlfOfThePattern = pattern.length / 2;
+            let harlfOfThePattern =Math.floor( pattern.length / 2);
             let splittedPattern = pattern.split('');
             splittedPattern.splice(harlfOfThePattern, 1);
             pattern = splittedPattern.join('');
@@ -32,14 +32,14 @@ function melrahShake(arr) {
         }
 
         if (!isExist) {
-            console.log('No shake.');
             break;
         }
     }
     
+    console.log('No shake.');
     console.log(splittedStr.join(''));
 }
 
-melrahShake(['##mtm!!mm.mm*mtm.#', 'mtm']);
+// melrahShake(['##mtm!!mm.mm*mtm.#', 'mtm']);
 
-// melrahShake(['astalavista baby', 'sta']);
+melrahShake(['astalavista baby', 'sta']);
