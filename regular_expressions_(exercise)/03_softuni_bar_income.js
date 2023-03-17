@@ -7,7 +7,7 @@ function softUniBarIncome(input) {
     let customerPattern = /%(?<name>[A-Z][a-z]+)%/;
     let productPattern = /<(?<product>[A-Za-z]+)>/;
     let countPattern = /\|(?<count>[0-9]+)\|/;
-    let pricePattern = /(?<price>[0-9.]+)\$/;
+    let pricePattern = /(?<price>[0-9]|[0-9.]+)\$/;
 
     while (currentLine !== 'end of shift') {
 
@@ -73,7 +73,7 @@ function softUniBarIncome(input) {
 
 softUniBarIncome([
     '%George%<Croissant>|2|10.3$',
-    '%Peter%<Test>|1|1.3$',
+    '%Peter%<Test>|1|1$',
     '%Peter%<Gum>|1|1.3$',
     '%Maria%<Cola>|1|2.4$',
     'end of shift'
