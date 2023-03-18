@@ -21,12 +21,12 @@ function softUniBarIncome(input) {
     console.log(`Total income: ${totalIncome.toFixed(2)}`);
 }
 
-softUniBarIncome(['%George%<Croissant>|2|10.3$',
-'%Peter%<Gum>|1|1.3$',
-'%Peter%<Gum>|1|1.4$',
-'%Maria%<Cola>|1|2.4$',
-'end of shift']
-);
+softUniBarIncome([
+    '%George%<Croissant>|2|10.3$',
+    '%Peter%<Gum>|1|1.3$',
+    '%Maria%<Cola>|1|2.4$',
+    'end of shift'
+]);
 
 // softUniBarIncome([
 //     '%InvalidName%<Croissant>|2|10.3$',
