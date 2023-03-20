@@ -17,7 +17,6 @@ function rageQuit(inputText) {
                 uniqueSymbols.add(char.toUpperCase());
             }
         }
-
     }
 
     console.log(`Unique symbols used: ${uniqueSymbols.size}\n${outputMessage.toUpperCase()}`);
